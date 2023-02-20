@@ -1,24 +1,61 @@
-# README
+# Recipe
+> In this application I explore setting up a rails application with react inclusive and trying to use react libraries such as redux and react-router with a rails api application.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Built with
+- Ruby on Rails
+- React
+- Redux
+- Webback
+- PostgreSQL
 
-Things you may want to cover:
 
-* Ruby version
+## Getting Started
 
-* System dependencies
+To run and view this application, you will first have to clone a local version of this repository using:
 
-* Configuration
+`git clone https://github.com/RayhanTabase/hello-rails-react.git`
 
-* Database creation
+After that navigate to the newly created folder:
 
-* Database initialization
+`cd hello-rails-react`
 
-* How to run the test suite
+You now have access to the files.
+To install necessary dependencies and packagies for node and rails run:
 
-* Services (job queues, cache servers, search engines, etc.)
+ `yarn install`
+ `bundle install`
 
-* Deployment instructions
+Configure PostgreSQL database in your project in the project directory:
 
-* ...
+`config/database.yml`
+
+Start a local server running the command:
+
+`./bin/dev`
+
+On your local host, view the react component Greeting which generates a random message:
+
+`http://127.0.0.1:3000/greetings`
+
+
+## Author
+
+👤 **Salim Abdulai**
+
+- GitHub: [@RayhanTabase](https://github.com/RayhanTabase)
+- LinkedIn: [Salim-Abdulai](https://linkedin.com/in/salim-abdulai-5430065b)
+
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
