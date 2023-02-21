@@ -1,3 +1,10 @@
 <p style="color: green"><%= notice %></p>
 
-<div id="root">
+<h1>Messages</h1>
+
+<% @messages.each do |message| %>
+  <h3>
+    <%= message.body %>
+  </h3>
+<% end %>
+

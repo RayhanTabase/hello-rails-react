@@ -5,10 +5,6 @@ import Greetings from './Components/Greetings';
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <h2>Hello world!</h2>,
-  },
-  {
     path: "/greetings",
     element: <Greetings />,
   },

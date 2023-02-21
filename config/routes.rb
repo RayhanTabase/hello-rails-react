@@ -5,7 +5,6 @@ Rails.application.routes.draw do
     end
   end
   resources :messages
-  # , only: [:index]
+  get "/greetings", to: "greetings#index"
   root "messages#index"
-  get "/greetings", to: "messages#index"
 end
