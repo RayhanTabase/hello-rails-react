@@ -1,0 +1,46 @@
+import { createSlice, configureStore, createAsyncThunk } from '@reduxjs/toolkit';
+
+export const fetchRandom = createAsyncThunk('messages/fetchRamdom', async () => {
+  try {
+    const response = await fetch(`http://127.0.0.1:3000/api/v1/messages`);
+    const data = await response.json();
+    return data;
+    
+  } catch (error) {
+    
+  }
+})
+
+const messageSlice = createSlice({
+  name: 'randomess',
+  initialState: {
+    message: '',
+    status:'',
+    error: null
+  },
+  reducers: {
+  },
+  extraReducers(builder) {
+    builder
+      .addCase(fetchRandom.pending, (state) => {
+        state.status = 'loading'
+      })
+      .addCase(fetchRandom.fulfilled, (state, action) => {
+        state.status = 'succeeded'
+        // Add any fetched posts to the array
+        state.message = action.payload.body
+      })
+      .addCase(fetchRandom.rejected, (state, action) => {
+        state.status = 'failed'
+        state.error = action.error.message
+      })
+  }
+})
+
+// export const {  } = messageSlice.actions
+
+const store = configureStore({
+  reducer: messageSlice.reducer
+})
+
+export default store;

@@ -1,5 +1,10 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Random Message</h1>
+<h1>Messages</h1>
 
-<div id="root">
+<% @messages.each do |message| %>
+  <h3>
+    <%= message.body %>
+  </h3>
+<% end %>
+
